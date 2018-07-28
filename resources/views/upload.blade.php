@@ -15,7 +15,7 @@
  
     <div class="row">
         <div class="col-sm-10 offset-sm-1">
-            <h2 class="page-heading">Upload your Images <span id="counter"></span></h2>
+            <h2 class="page-heading">Upload seu XML </h2>
             <form method="post" action="{{ url('/upload-file') }}"
                   enctype="multipart/form-data" class="dropzone" id="my-dropzone">
                 {{ csrf_field() }}

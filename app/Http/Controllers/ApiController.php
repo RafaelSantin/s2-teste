@@ -14,9 +14,16 @@ class ApiController extends Controller
 
     public function getPerson()
     {
-    	$personDb = Person::all();
+    	$personDb = Person::with('phone')->get();
 
 	    return json_encode($personDb);
+    }   
+
+    public function getOrders()
+    {
+    	$orderDb = Order::with('orderItem')->get();
+
+	    return json_encode($orderDb);
     }
 
 }

@@ -1,5 +1,4 @@
 # s2-teste
-# Project Title
 
 Teste para empresa, recebe um xml processa e adiciona no banco, criado metodo get para recuperação de dados. 
 
@@ -25,4 +24,24 @@ acessar pasta onde foi clonado o sistema e executar o comando:
 
 ```
 docker-compose exec laravel php artisan migrate --force
+```
+
+### Acessando a aplicação
+
+A porta liberada no docker é a 82, para acessar a aplicação fazer como no exemplo abaixo:
+
+```
+localhost:82
+```
+
+### get API
+
+Junto com o sistema foram feitas dois retornos para obtenção de dados, uma para pessoas e outro para pedidos:
+
+```
+localhost:82/api/get-person
+```
+
+```
+localhost:82/api/get-orders
 ```

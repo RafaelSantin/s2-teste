@@ -16,10 +16,14 @@ Dropzone.options.myDropzone = {
                 data: {id: file.name, _token: $('[name="_token"]').val()},
                 dataType: 'json',
                 success: function (data) {
-                    total_photos_counter--;
-                    $("#counter").text("# " + total_photos_counter);
+                    // total_photos_counter--;
+                    // $("#counter").text("# " + total_photos_counter);
                 }
             });
+        });
+        this.on('error', function(file, errorMessage) {
+            $(file.previewElement).find('.dz-error-message').text("Ocorreu um erro ao fazer upload, favor verificar se o arquivo XML está correto e não contem erros.");
+            // $('.dz-error-message').text('Ocorreu um erro ao fazer upload, favor verificar se o arquivo XML está correto e não contem erros.');
         });
     },
     success: function (file, done) {
